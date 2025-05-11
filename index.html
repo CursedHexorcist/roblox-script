@@ -39,13 +39,26 @@
 </audio>
 
 <script>
-  window.addEventListener('scroll', function() {
-    var audio = document.getElementById('audioPlayer');
-    audio.play().catch(function(error) {
-      console.log('Gagal memutar audio:', error);
+  const audio = document.getElementById('audioPlayer');
+  let hasPlayed = false;
+
+  function tryPlay() {
+    if (hasPlayed) return;
+    audio.play().then(() => {
+      hasPlayed = true;
+      console.log("Audio berhasil diputar.");
+    }).catch(err => {
+      console.log("Gagal memutar audio:", err);
     });
-  });
+  }
+
+  // Event untuk berbagai jenis interaksi scroll/gerakan
+  window.addEventListener('scroll', tryPlay);
+  window.addEventListener('wheel', tryPlay);        // scroll mouse
+  window.addEventListener('touchmove', tryPlay);    // scroll touchscreen
+  window.addEventListener('keydown', tryPlay);      // scroll pakai keyboard (panah, space, dll)
 </script>
+
 
 
 		<section class="Home">
