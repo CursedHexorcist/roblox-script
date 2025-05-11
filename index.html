@@ -33,19 +33,22 @@
 		<link rel="icon" href="images/Wl.png" type="image/x-icon" />
 	</head>
 	<body>
-		<audio id="audioPlayer" autoplay loop>
+	<audio id="audioPlayer" loop>
   <source src="lagu.mp3" type="audio/mp3">
   Browser kamu tidak mendukung elemen audio.
 </audio>
 
+<button onclick="playAudio()">Klik untuk Memulai Musik</button>
+
 <script>
-  window.onload = function() {
+  function playAudio() {
     var audio = document.getElementById('audioPlayer');
     audio.play().catch(function(error) {
-      console.log('Gagal memutar audio:', error);
+      console.log('Error: Gagal memutar audio', error);
     });
-  };
+  }
 </script>
+
 
 
 		<section class="Home">
