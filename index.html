@@ -47,17 +47,25 @@
     audio.play().then(() => {
       hasPlayed = true;
       console.log("Audio berhasil diputar.");
+      // Hapus semua event listener setelah berhasil
+      window.removeEventListener('mousemove', tryPlay);
+      window.removeEventListener('wheel', tryPlay);
+      window.removeEventListener('scroll', tryPlay);
+      window.removeEventListener('touchstart', tryPlay);
+      window.removeEventListener('keydown', tryPlay);
     }).catch(err => {
       console.log("Gagal memutar audio:", err);
     });
   }
 
-  // Event untuk berbagai jenis interaksi scroll/gerakan
-  window.addEventListener('scroll', tryPlay);
-  window.addEventListener('wheel', tryPlay);        // scroll mouse
-  window.addEventListener('touchmove', tryPlay);    // scroll touchscreen
-  window.addEventListener('keydown', tryPlay);      // scroll pakai keyboard (panah, space, dll)
+  // Event apapun yang menunjukkan interaksi pengguna
+  window.addEventListener('mousemove', tryPlay);  // gerakan mouse
+  window.addEventListener('wheel', tryPlay);      // scroll wheel
+  window.addEventListener('scroll', tryPlay);     // scroll halaman
+  window.addEventListener('touchstart', tryPlay); // sentuhan awal (mobile)
+  window.addEventListener('keydown', tryPlay);    // tombol ditekan
 </script>
+
 
 
 
