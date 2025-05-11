@@ -4,28 +4,28 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
 		<meta name="google-site-verification" content="WHLWQb7_hoW3fRhZ2XmOLPpfN2EubRtyQmTEq6JmpdA" />
-		<meta name="title" content="Growtopia Script Marketplace" />
-		<title>Growtopia Script Marketplace</title>
+		<meta name="title" content="Growtopia Script Shop" />
+		<title>Growtopia Script Shop</title>
 		<meta
 			name="description"
-			content="Growtopia Script Marketplace - Buy high-quality scripts for your Growtopia gameplay." />
+			content="Growtopia Script Shop - Purchase high-quality scripts for your Growtopia gameplay." />
 
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="https://growtopiacalculator.vercel.app/" />
-		<meta property="og:title" content="Growtopia Script Marketplace" />
+		<meta property="og:title" content="Growtopia Script Shop" />
 		<meta
 			property="og:description"
-			content="Growtopia Script Marketplace - Buy high-quality scripts for your Growtopia gameplay." />
+			content="Growtopia Script Shop - Purchase high-quality scripts for your Growtopia gameplay." />
 		<meta property="og:image" content="https://growtopiacalculator.vercel.app/images/Background/growtopiashop.png" />
 
 		<!-- Twitter -->
 		<meta property="twitter:card" content="summary_large_image" />
 		<meta property="twitter:url" content="https://growtopiacalculator.vercel.app/" />
-		<meta property="twitter:title" content="Growtopia Script Marketplace" />
+		<meta property="twitter:title" content="Growtopia Script Shop" />
 		<meta
 			property="twitter:description"
-			content="Growtopia Script Marketplace - Buy high-quality scripts for your Growtopia gameplay." />
+			content="Growtopia Script Shop - Purchase high-quality scripts for your Growtopia gameplay." />
 		<meta property="twitter:image" content="https://growtopiacalculator.vercel.app/images/Background/growtopiashop.png" />
 
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -65,74 +65,81 @@
 			</div>
 		</section>
 
-		<section class="ScriptMarket">
-			<h2 class="Title1" data-aos="fade-right" data-aos-duration="1000">Script Marketplace</h2>
+		<section class="ScriptShop">
+			<h2 class="Title1" data-aos="fade-right" data-aos-duration="1000">Script Shop</h2>
 
 			<div class="container">
-				<div class="ScriptSelection">
-					<form id="scriptForm">
-						<div class="input-group" data-aos="fade-up" data-aos-duration="1000">
-							<label for="scriptType">Select Script:</label>
-							<select id="scriptType" name="scriptType" required>
-								<option value="">-- Choose a script --</option>
-								<option value="autofarm">Auto Farm Script (50 WL)</option>
-								<option value="autobuild">Auto Build Script (75 WL)</option>
-								<option value="autotrade">Auto Trade Script (100 WL)</option>
-								<option value="autosurgery">Auto Surgery Script (120 WL)</option>
-								<option value="autofishing">Auto Fishing Script (80 WL)</option>
-								<option value="autocooking">Auto Cooking Script (60 WL)</option>
-								<option value="autopunch">Auto Punch Script (40 WL)</option>
-								<option value="autobfg">Auto BFG Script (150 WL)</option>
-							</select>
+				<div class="script-list">
+					<div class="script-item" data-aos="fade-up" data-aos-duration="1000">
+						<div class="script-info">
+							<h3>Auto Farmer</h3>
+							<p>Automatically farms your world with customizable settings</p>
+							<div class="script-price">
+								<img src="images/Wl.png" alt="World Lock" class="wl-icon">
+								<span>5</span>
+							</div>
 						</div>
+						<button class="buy-button">Buy Now</button>
+					</div>
 
-						<div class="input-group" data-aos="fade-up" data-aos-duration="1000">
-							<label for="quantity">Quantity:</label>
-							<input 
-								type="number" 
-								id="quantity" 
-								name="quantity" 
-								min="1" 
-								value="1" 
-								required />
+					<div class="script-item" data-aos="fade-up" data-aos-duration="1100">
+						<div class="script-info">
+							<h3>Auto Fisher</h3>
+							<p>Automatically fishes for you with smart detection</p>
+							<div class="script-price">
+								<img src="images/Wl.png" alt="World Lock" class="wl-icon">
+								<span>7</span>
+							</div>
 						</div>
+						<button class="buy-button">Buy Now</button>
+					</div>
 
-						<div class="input-group" data-aos="fade-up" data-aos-duration="1100">
-							<label for="paymentMethod">Payment Method:</label>
-							<select id="paymentMethod" name="paymentMethod" required>
-								<option value="">-- Select payment --</option>
-								<option value="worldlocks">World Locks</option>
-								<option value="diamonds">Diamonds</option>
-								<option value="paypal">PayPal</option>
-							</select>
+					<div class="script-item" data-aos="fade-up" data-aos-duration="1200">
+						<div class="script-info">
+							<h3>Auto Surgery</h3>
+							<p>Automatically performs surgery with high success rate</p>
+							<div class="script-price">
+								<img src="images/Wl.png" alt="World Lock" class="wl-icon">
+								<span>10</span>
+							</div>
 						</div>
+						<button class="buy-button">Buy Now</button>
+					</div>
 
-						<div class="input-group" data-aos="fade-up" data-aos-duration="1200">
-							<label for="username">GrowID:</label>
-							<input 
-								type="text" 
-								id="username" 
-								name="username" 
-								placeholder="Your GrowID" 
-								required />
+					<div class="script-item" data-aos="fade-up" data-aos-duration="1300">
+						<div class="script-info">
+							<h3>Auto Trader</h3>
+							<p>Automatically trades items based on your settings</p>
+							<div class="script-price">
+								<img src="images/Wl.png" alt="World Lock" class="wl-icon">
+								<span>8</span>
+							</div>
 						</div>
+						<button class="buy-button">Buy Now</button>
+					</div>
 
-						<button type="button" id="buyButton">BUY NOW</button>
-					</form>
-				</div>
+					<div class="script-item" data-aos="fade-up" data-aos-duration="1400">
+						<div class="script-info">
+							<h3>Auto Builder</h3>
+							<p>Builds structures automatically from blueprints</p>
+							<div class="script-price">
+								<img src="images/Wl.png" alt="World Lock" class="wl-icon">
+								<span>12</span>
+							</div>
+						</div>
+						<button class="buy-button">Buy Now</button>
+					</div>
 
-				<div class="script-details">
-					<div id="scriptInfo">
-						<h2 data-aos="fade-up" data-aos-duration="1100">Script Details</h2>
-						<div class="script-description" data-aos="fade-up" data-aos-duration="500">
-							<p>Select a script from the dropdown to view details and pricing.</p>
+					<div class="script-item" data-aos="fade-up" data-aos-duration="1500">
+						<div class="script-info">
+							<h3>Auto Mass Message</h3>
+							<p>Sends messages automatically to multiple players</p>
+							<div class="script-price">
+								<img src="images/Wl.png" alt="World Lock" class="wl-icon">
+								<span>6</span>
+							</div>
 						</div>
-						<div class="script-price" data-aos="fade-up" data-aos-duration="600">
-							<h3>Price: <span id="priceDisplay">0 WL</span></h3>
-						</div>
-						<div class="script-total" data-aos="fade-up" data-aos-duration="700">
-							<h3>Total: <span id="totalDisplay">0 WL</span></h3>
-						</div>
+						<button class="buy-button">Buy Now</button>
 					</div>
 				</div>
 			</div>
@@ -141,12 +148,12 @@
 			<br />
 			<div class="About">
 				<h2 data-aos="fade-right" data-aos-duration="1100">About</h2>
+
 				<p style="text-align: justify" data-aos="fade-right" data-aos-duration="1400">
-					Growtopia Script Marketplace is your one-stop shop for high-quality Growtopia scripts. 
-					We offer a variety of automated scripts to enhance your gameplay experience. 
-					All our scripts are carefully tested and regularly updated to ensure compatibility 
-					with the latest version of Growtopia. Purchase with confidence and take your 
-					Growtopia experience to the next level!
+					Growtopia Script Shop offers high-quality scripts to enhance your gameplay experience. 
+					Our scripts are carefully developed to provide automation for various in-game activities 
+					while maintaining safety and efficiency. Each script comes with detailed instructions 
+					and support to ensure you get the most out of your purchase.
 				</p>
 			</div>
 
@@ -170,160 +177,6 @@
 		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/EasePack.min.js"></script>
-		<script>
-			// Script prices
-			const scriptPrices = {
-				autofarm: 50,
-				autobuild: 75,
-				autotrade: 100,
-				autosurgery: 120,
-				autofishing: 80,
-				autocooking: 60,
-				autopunch: 40,
-				autobfg: 150
-			};
-
-			// Script descriptions
-			const scriptDescriptions = {
-				autofarm: "Automatically farms blocks in your world. Perfect for mass producers. Works with all farmable blocks.",
-				autobuild: "Automatically builds structures based on your design. Saves hours of manual building.",
-				autotrade: "Automates trading in trade worlds. Can scan for best deals and auto-trade based on your settings.",
-				autosurgery: "Fully automates surgery procedures. Works with all surgery tools and conditions.",
-				autofishing: "Automatically fishes in fishing worlds. Detects bites and reels in fish efficiently.",
-				autocooking: "Automates cooking process. Can handle all recipes and cooking stations.",
-				autopunch: "Automatically punches blocks. Great for breaking worlds or harvesting.",
-				autobfg: "Complete BFG automation. Manages planting, breaking, and collecting efficiently."
-			};
-
-			// Update script info when selection changes
-			document.getElementById('scriptType').addEventListener('change', function() {
-				const selectedScript = this.value;
-				const quantity = parseInt(document.getElementById('quantity').value) || 1;
-				
-				if (selectedScript) {
-					const price = scriptPrices[selectedScript];
-					const total = price * quantity;
-					
-					document.getElementById('priceDisplay').textContent = `${price} WL`;
-					document.getElementById('totalDisplay').textContent = `${total} WL`;
-					document.querySelector('.script-description p').textContent = scriptDescriptions[selectedScript];
-				} else {
-					document.getElementById('priceDisplay').textContent = '0 WL';
-					document.getElementById('totalDisplay').textContent = '0 WL';
-					document.querySelector('.script-description p').textContent = 'Select a script from the dropdown to view details and pricing.';
-				}
-			});
-
-			// Update total when quantity changes
-			document.getElementById('quantity').addEventListener('input', function() {
-				const selectedScript = document.getElementById('scriptType').value;
-				const quantity = parseInt(this.value) || 1;
-				
-				if (selectedScript) {
-					const price = scriptPrices[selectedScript];
-					const total = price * quantity;
-					document.getElementById('totalDisplay').textContent = `${total} WL`;
-				}
-			});
-
-			// Buy button functionality
-			document.getElementById('buyButton').addEventListener('click', function() {
-				const scriptType = document.getElementById('scriptType').value;
-				const quantity = document.getElementById('quantity').value;
-				const paymentMethod = document.getElementById('paymentMethod').value;
-				const username = document.getElementById('username').value;
-				
-				if (!scriptType || !quantity || !paymentMethod || !username) {
-					alert('Please fill in all fields before purchasing.');
-					return;
-				}
-				
-				const scriptName = document.getElementById('scriptType').options[document.getElementById('scriptType').selectedIndex].text.split(' (')[0];
-				const totalPrice = scriptPrices[scriptType] * parseInt(quantity);
-				
-				alert(`Order placed!\n\nScript: ${scriptName}\nQuantity: ${quantity}\nTotal: ${totalPrice} WL\nPayment Method: ${paymentMethod}\nGrowID: ${username}\n\nWe will contact you in-game for delivery.`);
-			});
-
-			// GSAP animations
-			gsap.config({
-				autoSleep: 0,
-			});
-
-			const commonScrollTrigger = {
-				scrub: 1,
-			};
-
-			gsap.matchMedia().add("(max-width: 768px)", () => {
-				// Mobile animations
-				gsap.fromTo(
-					"#Gedung1",
-					{ scale: 1, y: 0, x: 0 },
-					{ scale: 1.1, y: 400, x: -100, scrollTrigger: commonScrollTrigger },
-				);
-
-				gsap.fromTo(
-					"#Gedung2",
-					{ scale: 1, y: 0, x: 0 },
-					{ scale: 1.1, y: 200, x: 100, scrollTrigger: commonScrollTrigger },
-				);
-
-				gsap.fromTo(
-					"#Kota1",
-					{ scale: 1, y: 0 },
-					{ scale: 1.1, y: 1000, scrollTrigger: commonScrollTrigger },
-				);
-
-				gsap.fromTo(
-					"#Kota2",
-					{ scale: 1, y: 0 },
-					{ scale: 1.1, y: 1000, scrollTrigger: commonScrollTrigger },
-				);
-
-				gsap.fromTo("#Sun", { x: 0 }, { x: 500, scrollTrigger: commonScrollTrigger });
-
-				gsap.fromTo(
-					"#Title",
-					{ scale: 1, y: 0 },
-					{ scale: 4, y: -100, scrollTrigger: commonScrollTrigger },
-				);
-			});
-
-			gsap.matchMedia().add("(min-width: 769px)", () => {
-				// Desktop animations
-				gsap.fromTo(
-					"#Gedung1",
-					{ scale: 1, y: 0, x: 0 },
-					{ scale: 1.3, y: 200, x: -50, scrollTrigger: commonScrollTrigger },
-				);
-
-				gsap.fromTo(
-					"#Gedung2",
-					{ scale: 1, y: 0, x: 0 },
-					{ scale: 1.2, y: 200, x: 50, scrollTrigger: commonScrollTrigger },
-				);
-
-				gsap.fromTo(
-					"#Kota1",
-					{ scale: 1, y: 0 },
-					{ scale: 1.2, y: 100, scrollTrigger: commonScrollTrigger },
-				);
-
-				gsap.fromTo(
-					"#Kota2",
-					{ scale: 1, y: 0 },
-					{ scale: 1.2, y: 200, scrollTrigger: commonScrollTrigger },
-				);
-
-				gsap.fromTo("#Sun", { x: 0 }, { x: 200, scrollTrigger: commonScrollTrigger });
-
-				gsap.fromTo(
-					"#Title",
-					{ scale: 1, y: 0 },
-					{ scale: 2, y: -200, scrollTrigger: commonScrollTrigger },
-				);
-			});
-
-			AOS.init({disable: 'mobile'});
-		</script>
+		<script src="script.js"></script>
 	</body>
 </html>
