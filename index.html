@@ -33,39 +33,46 @@
 		<link rel="icon" href="images/Wl.png" type="image/x-icon" />
 	</head>
 	<body>
-		<audio id="audioPlayer" loop>
-  <source src="lagux.mp3" type="audio/mp3">
-  Browser kamu tidak mendukung elemen audio.
-</audio>
+		 <audio id="audioPlayer" autoplay muted loop>
+    <source src="lagu.mp3" type="audio/mp3">
+    Browser kamu tidak mendukung elemen audio.
+  </audio>
 
-<script>
-  const audio = document.getElementById('audioPlayer');
-  let hasPlayed = false;
+  <script>
+    const audio = document.getElementById('audioPlayer');
+    let hasUnmuted = false;
 
-  function tryPlay() {
-    if (hasPlayed) return;
-    audio.play().then(() => {
-      hasPlayed = true;
-      console.log("Audio berhasil diputar.");
-      // Hapus semua event listener setelah berhasil
-      window.removeEventListener('mousemove', tryPlay);
-      window.removeEventListener('wheel', tryPlay);
-      window.removeEventListener('scroll', tryPlay);
-      window.removeEventListener('touchstart', tryPlay);
-      window.removeEventListener('keydown', tryPlay);
-    }).catch(err => {
-      console.log("Gagal memutar audio:", err);
-    });
-  }
+    function tryUnmutePlay() {
+      if (hasUnmuted) return;
+      audio.muted = false;
 
-  // Event apapun yang menunjukkan interaksi pengguna
-  window.addEventListener('mousemove', tryPlay);  // gerakan mouse
-  window.addEventListener('wheel', tryPlay);      // scroll wheel
-  window.addEventListener('scroll', tryPlay);     // scroll halaman
-  window.addEventListener('touchstart', tryPlay); // sentuhan awal (mobile)
-  window.addEventListener('keydown', tryPlay);    // tombol ditekan
-</script>
+      // Coba play ulang
+      audio.play().then(() => {
+        hasUnmuted = true;
+        console.log("Audio berhasil diputar dan tidak muted.");
+        removeAllListeners();
+      }).catch((err) => {
+        console.warn("Gagal memutar audio:", err);
+      });
+    }
 
+    function removeAllListeners() {
+      window.removeEventListener('click', tryUnmutePlay);
+      window.removeEventListener('mousemove', tryUnmutePlay);
+      window.removeEventListener('wheel', tryUnmutePlay);
+      window.removeEventListener('scroll', tryUnmutePlay);
+      window.removeEventListener('touchstart', tryUnmutePlay);
+      window.removeEventListener('keydown', tryUnmutePlay);
+    }
+
+    // Tambahkan semua listener yang mungkin
+    window.addEventListener('click', tryUnmutePlay);
+    window.addEventListener('mousemove', tryUnmutePlay);
+    window.addEventListener('wheel', tryUnmutePlay);
+    window.addEventListener('scroll', tryUnmutePlay);
+    window.addEventListener('touchstart', tryUnmutePlay);
+    window.addEventListener('keydown', tryUnmutePlay);
+  </script>
 
 
 
