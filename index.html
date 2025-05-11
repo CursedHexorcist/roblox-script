@@ -33,9 +33,20 @@
 		<link rel="icon" href="images/Wl.png" type="image/x-icon" />
 	</head>
 	<body>
-		<audio autoplay loop>
-			<source src="lagux.mp3" type="audio/mp3">
-		</audio>
+		<audio id="audioPlayer" autoplay loop>
+  <source src="lagu.mp3" type="audio/mp3">
+  Browser kamu tidak mendukung elemen audio.
+</audio>
+
+<script>
+  window.onload = function() {
+    var audio = document.getElementById('audioPlayer');
+    audio.play().catch(function(error) {
+      console.log('Gagal memutar audio:', error);
+    });
+  };
+</script>
+
 
 		<section class="Home">
 			<div class="ContainerBackground">
